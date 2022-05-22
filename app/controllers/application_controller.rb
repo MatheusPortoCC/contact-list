@@ -16,7 +16,7 @@ class ApplicationController < ActionController::API
     end
   end
 
-  def set_user_authorization
+  def set_authorization
     authorization = decode_authorization[0]
 
     if Time.current >= Time.parse(authorization['expires_at'])
